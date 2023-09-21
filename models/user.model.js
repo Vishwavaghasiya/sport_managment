@@ -2,30 +2,30 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema(
     {
-        teams: {
-            type: mongoose.Types.ObjectId,
-            ref: "team"
-        },
-        founder: {
-            type: mongoose.Types.ObjectId,
-            ref: "founder"
-        },
-        contactUs: {
-            type: mongoose.Types.ObjectId,
-            ref: "contactUs"
-        },
-        sportsGallery: {
-            type: mongoose.Types.ObjectId,
-            ref: "sportsGallery"
-        },
-        sportsCategory: {
-            type: mongoose.Types.ObjectId,
-            ref: "sportsCategory"
-        },
-        tournament: {
-            type : mongoose.Types.ObjectId,
-            ref : "tournament"
-        },
+        // teams: {
+        //     type: mongoose.Types.ObjectId,
+        //     ref: "team"
+        // },
+        // founder: {
+        //     type: mongoose.Types.ObjectId,
+        //     ref: "founder"
+        // },
+        // contactUs: {
+        //     type: mongoose.Types.ObjectId,
+        //     ref: "contactUs"
+        // },
+        // sportsGallery: {
+        //     type: mongoose.Types.ObjectId,
+        //     ref: "sportsGallery"
+        // },
+        // sportsCategory: {
+        //     type: mongoose.Types.ObjectId,
+        //     ref: "sportsCategory"
+        // },
+        // tournament: {
+        //     type : mongoose.Types.ObjectId,
+        //     ref : "tournament"
+        // },
         user_name: {
             type: String,
             trim: true

@@ -9,27 +9,27 @@ const router = express.Router();
 router.post(
     "/createteam",
     validate(teamValidation.createTeam),
-    teamController.createteam
+    teamController.createTeam
 );
 
-// router.get(
-//     "/getList",
-//     teamController.getTeamList
-// );
+router.get(
+    "/getList",
+    teamController.getTeamList
+);
 
-// router.get(
-//     "/getDetails/:teamId",
-//     teamController.getTeamDetails
-// );
+router.get(
+    "/getDetails/:teamId",
+    teamController.getTeamDetails
+);
 
-// router.put(
-//     "/update/:teamId",
-//     teamController.updateRecord
-// );
+router.put(
+    "/update/:teamId",
+    teamController.updateRecord
+);
 
-// router.delete(
-//     "/delete/:teamId",
-//     teamController.deleteRecord
-// );
+router.delete(
+    "/delete/:teamId",
+    teamController.deleteRecord
+);
 
 module.exports = router

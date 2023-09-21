@@ -9,27 +9,27 @@ const router = express.Router();
 router.post(
     "/createtournament",
     validate(tournamentValidation.createTournament),
-    tournamentController.createtournament
+    tournamentController.createTournament
 );
 
-// router.get(
-//     "/getList",
-//     tournamentController.getTournamentList
-// );
+router.get(
+    "/getList",
+    tournamentController.getTournamentList
+);
 
-// router.get(
-//     "/getDetails/:tournamentId",
-//     tournamentController.getTournamentDetails
-// );
+router.get(
+    "/getDetails/:tournamentId",
+    tournamentController.getTournamentDetails
+);
 
-// router.put(
-//     "/update/:tournamentId",
-//     tournamentController.updateRecord
-// );
+router.put(
+    "/update/:tournamentId",
+    tournamentController.updateRecord
+);
 
-// router.delete(
-//     "/delete/:tournamentId",
-//     tournamentController.deleteRecord
-// );
+router.delete(
+    "/delete/:tournamentId",
+    tournamentController.deleteRecord
+);
 
 module.exports = router

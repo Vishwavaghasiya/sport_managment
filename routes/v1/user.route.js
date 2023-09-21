@@ -7,29 +7,29 @@ const validate = require("../../middlewares/validate");
 const router = express.Router();
 
 router.post(
-    "/createuser",
+    "/createUser",
     validate(userValidation.createUser),
     userController.createUser
 );
 
-// router.get(
-//     "/getList",
-//     userController.getUserList
-// );
+router.get(
+    "/getList",
+    userController.getUserList
+);
 
-// router.get(
-//     "/getDetails/:userId",
-//     userController.getUserDetails
-// );
+router.get(
+    "/getDetails/:userId",
+    userController.getUserDetails
+);
 
-// router.put(
-//     "/update/:userId",
-//     userController.updateRecord
-// );
+router.put(
+    "/update/:userId",
+    userController.updateRecord
+);
 
-// router.delete(
-//     "/delete/:userId",
-//     userController.deleteRecord
-// );
+router.delete(
+    "/delete/:userId",
+    userController.deleteRecord
+);
 
 module.exports = router

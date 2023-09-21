@@ -9,27 +9,27 @@ const router = express.Router();
 router.post(
     "/createsportsCategory",
     validate(sportsCategoryValidation.createSportsCategory),
-    sportsCategoryController.createsportsCategory
+    sportsCategoryController.createSportsCategory
 );
 
-// router.get(
-//     "/getList",
-//     sportsCategoryController.getSportsCategoryList
-// );
+router.get(
+    "/getList",
+    sportsCategoryController.getSportsCategoryList
+);
 
-// router.get(
-//     "/getDetails/:sportsCategoryId",
-//     sportsCategoryController.getSportsCategoryDetails
-// );
+router.get(
+    "/getDetails/:sportsCategoryId",
+    sportsCategoryController.getSportsCategoryDetails
+);
 
-// router.put(
-//     "/update/:sportsCategoryId",
-//     sportsCategoryController.updateRecord
-// );
+router.put(
+    "/update/:sportsCategoryId",
+    sportsCategoryController.updateRecord
+);
 
-// router.delete(
-//     "/delete/:sportsCategoryId",
-//     sportsCategoryController.deleteRecord
-// );
+router.delete(
+    "/delete/:sportsCategoryId",
+    sportsCategoryController.deleteRecord
+);
 
 module.exports = router
