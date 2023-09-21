@@ -6,3 +6,4 @@ module.exports.sportsGalleryValidation = require("./sports.gallery.validation");
 module.exports.teamValidation = require("./team.validation");
 module.exports.tournamentValidation = require("./tournament.validation");
 module.exports.userValidation = require("./user.validation");
+module.exports.tokenValidation = require("./token.validation");

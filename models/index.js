@@ -6,3 +6,4 @@ module.exports.SportsGallery = require("./sports.gallery.model");
 module.exports.Team = require("./team.model");
 module.exports.Tournament = require("./tournament.model");
 module.exports.User = require("./user.model");
+module.exports.Token = require("./token.model");

@@ -6,3 +6,4 @@ module.exports.sportsGalleryController = require("./sports.gallery.controller");
 module.exports.teamController = require("./team.controller");
 module.exports.tournamentController = require("./tournament.controller");
 module.exports.userController = require("./user.controller");
+module.exports.tokenController = require("./token.controller");

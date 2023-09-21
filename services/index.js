@@ -6,3 +6,4 @@ module.exports.sportsGalleryService = require("./sports.gallery.service");
 module.exports.teamService = require("./team.service");
 module.exports.tournamentService = require("./tournament.service");
 module.exports.userService = require("./user.service");
+module.exports.tokenService = require("./token.service");
