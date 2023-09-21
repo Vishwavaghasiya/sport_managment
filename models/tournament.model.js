@@ -18,7 +18,7 @@ const tournamentSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
-        teams: {
+        team: {
             type: mongoose.Types.ObjectId,
             ref: "team"
         },
@@ -36,7 +36,7 @@ const tournamentSchema = new mongoose.Schema(
         }
     },
     {
-        timeseries: true,
+        timestamps: true,
         versionKey: false
     }
 );

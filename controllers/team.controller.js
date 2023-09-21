@@ -15,7 +15,7 @@ const createTeam = async (req, res) => {
             data: team
         });
     } catch (error) {
-        res.status(error?.message).json({
+        res.status(error?.message || error?.message || 400).json({
             success: false,
             message: error?.message || "Something wents wrong , please try again or later !"
         });
@@ -58,8 +58,8 @@ const getTeamDetails = async (req, res) => {
         })
     } catch (error) {
         res.status(error?.message || 400).json({
-            success : false,
-            message : error?.message || "Something wents wrong , please try again or later !"
+            success: false,
+            message:error?.message ||  "Record not found !"
         })
     }
 }
@@ -83,7 +83,7 @@ const updateRecord = async (req, res) => {
     } catch (error) {
         res.status(error?.message || 400).json({
             success: false,
-            message: error?.message || "Something wents wrong , please try again or later !"
+            message: error?.message || "Record not found !"
         });
     }
 }

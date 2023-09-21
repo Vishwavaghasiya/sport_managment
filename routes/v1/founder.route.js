@@ -12,24 +12,24 @@ router.post(
     founderController.createFounder
 );
 
-// router.get(
-//     "/getList",
-//     founderController.getFounderList
-// );
+router.get(
+    "/getList",
+    founderController.getFounderList
+);
 
-// router.get(
-//     "/getDetails/:founderId",
-//     founderController.getFounderDetails
-// );
+router.get(
+    "/getDetails/:founderId",
+    founderController.getFounderDetails
+);
 
-// router.put(
-//     "/update/:founderId",
-//     founderController.updateRecord
-// );
+router.put(
+    "/update/:founderId",
+    founderController.updateRecord
+);
 
-// router.delete(
-//     "/delete/:founderId",
-//     founderController.deleteRecord
-// );
+router.delete(
+    "/delete/:founderId",
+    founderController.deleteRecord
+);
 
 module.exports = router

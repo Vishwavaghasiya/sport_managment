@@ -70,7 +70,7 @@ const updateRecord = async (req, res) => {
         const tournamentId = req.params.tournamentId;
         const tournamentEx = await tournamentService.getTournamentById(tournamentId);
         if (!tournamentEx) {
-            throw new Error("Something wents wrong , please try again or later !");
+            throw new Error("Record not found!");
         }
 
         const updated = await tournamentService.updateRecord(tournamentId, req.body);
@@ -83,7 +83,7 @@ const updateRecord = async (req, res) => {
     } catch (error) {
         res.status(error?.message || 400).json({
             success: false,
-            message: error?.message || "Something wents wrong , please try again or later !"
+            message: error?.message || "Record not found !"
         });
     }
 }

@@ -7,7 +7,7 @@ const validate = require("../../middlewares/validate");
 const router = express.Router();
 
 router.post(
-    "/createteam",
+    "/createTeam",
     validate(teamValidation.createTeam),
     teamController.createTeam
 );

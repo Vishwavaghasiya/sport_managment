@@ -12,24 +12,24 @@ router.post(
     dashboardController.createDashboard
 );
 
-// router.get(
-//     "/getList",
-//     dashboardController.getDashboardList
-// );
+router.get(
+    "/getList",
+    dashboardController.getDashboardList
+);
 
-// router.get(
-//     "/getDetails/:dashboardId",
-//     dashboardController.getDashboardDetails
-// );
+router.get(
+    "/getDetails/:dashboardId",
+    dashboardController.getdashboardDetails
+);
 
-// router.put(
-//     "/update/:dashboardId",
-//     dashboardController.updateRecord
-// );
+router.put(
+    "/update/:dashboardId",
+    dashboardController.updateRecord
+);
 
-// router.delete(
-//     "/delete/:dashboardId",
-//     dashboardController.deleteRecord
-// );
+router.delete(
+    "/delete/:dashboardId",
+    dashboardController.deleteRecord
+);
 
 module.exports = router

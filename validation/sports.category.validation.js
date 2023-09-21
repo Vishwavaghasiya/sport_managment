@@ -7,6 +7,7 @@ const createSportsCategory = {
             description: Joi.string().required().trim(),
             sports: Joi.string().required().trim(),
             color_code: Joi.string().required().trim(),
+            sportsGallery : Joi.string().required().trim()
         }
     )
 }

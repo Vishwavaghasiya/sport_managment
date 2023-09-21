@@ -17,7 +17,7 @@ const createUser = async (req, res) => {
     } catch (error) {
         res.status(error?.message).json({
             success: false,
-            message: error?.message || "Something wents wrong , please try again or later !"
+            message: "Something wents wrong , please try again or later !"
         });
     }
 }
@@ -59,7 +59,7 @@ const getUserDetails = async (req, res) => {
     } catch (error) {
         res.status(error?.message || 400).json({
             success: false,
-            message: error?.message || "Something wents wrong , please try again or later !"
+            message: "Something wents error?.message || wrong , please try again or later !"
         })
     }
 }
@@ -83,7 +83,7 @@ const updateRecord = async (req, res) => {
     } catch (error) {
         res.status(error?.message || 400).json({
             success: false,
-            message: error?.message || "Something wents wrong , please try again or later !"
+            message: "Something wents error?.message || wrong , please try again or later !"
         });
     }
 }
@@ -106,7 +106,7 @@ const deleteRecord = async (req, res) => {
     } catch (error) {
         res.status(error?.message || 400).json({
             success: false,
-            message: error?.message || "Something wents wrong , please try again or later !"
+            message: "Something wents error?.message || wrong , please try again or later !"
         });
     }
 }

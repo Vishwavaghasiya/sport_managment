@@ -7,7 +7,7 @@ const validate = require("../../middlewares/validate");
 const router = express.Router();
 
 router.post(
-    "/createsportsCategory",
+    "/createSportsCategory",
     validate(sportsCategoryValidation.createSportsCategory),
     sportsCategoryController.createSportsCategory
 );

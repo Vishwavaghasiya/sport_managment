@@ -7,29 +7,29 @@ const validate = require("../../middlewares/validate");
 const router = express.Router();
 
 router.post(
-    "/createsportsGallery",
+    "/createSportsGallery",
     validate(sportsGalleryValidation.createSportsGallery),
     sportsGalleryController.createSportsGallery
 );
 
-// router.get(
-//     "/getList",
-//     sportsGalleryController.getSportsGalleryList
-// );
+router.get(
+    "/getList",
+    sportsGalleryController.getSportsGalleryList
+);
 
-// router.get(
-//     "/getDetails/:sportsGalleryId",
-//     sportsGalleryController.getSportsGalleryDetails
-// );
+router.get(
+    "/getDetails/:sportsGalleryId",
+    sportsGalleryController.getSportsGalleryDetails
+);
 
-// router.put(
-//     "/update/:sportsGalleryId",
-//     sportsGalleryController.updateRecord
-// );
+router.put(
+    "/update/:sportsGalleryId",
+    sportsGalleryController.updateRecord
+);
 
-// router.delete(
-//     "/delete/:sportsGalleryId",
-//     sportsGalleryController.deleteRecord
-// );
+router.delete(
+    "/delete/:sportsGalleryId",
+    sportsGalleryController.deleteRecord
+);
 
 module.exports = router
