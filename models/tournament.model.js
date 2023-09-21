@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const founderSchema = new mongoose.Schema(
+const tournamentSchema = new mongoose.Schema(
     {
         name: {
             type: String,
@@ -41,5 +41,5 @@ const founderSchema = new mongoose.Schema(
     }
 );
 
-const founder = mongoose.model("founder", founderSchema);
-module.exports = founder
+const tournament = mongoose.model("tournament", tournamentSchema);
+module.exports = tournament
