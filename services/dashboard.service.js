@@ -5,7 +5,7 @@ const createDashboard = async (reqBody) => {
 }
 
 const getDashboardList = async (req, res) => {
-    return Dashboard.find();
+    return Dashboard.find().populate("user").populate("contactUs");
 }
 
 const getDashboardById = async (dashboardId) => {

@@ -19,6 +19,14 @@ const sportsGallerySchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "user"
         },
+        team: {
+            type: mongoose.Types.ObjectId,
+            ref: "team"
+        },
+        sportsCategory: {
+            type: mongoose.Types.ObjectId,
+            ref: "sportsCategory"
+        },
         sports_events: {
             type: String,
             trim: true

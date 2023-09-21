@@ -6,6 +6,14 @@ const TeamSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
+        user: {
+            type: mongoose.Types.ObjectId,
+            ref: "user"
+        },
+        tournament: {
+            type: mongoose.Types.ObjectId,
+            ref: "tournament"
+        },
         abbreviation: {
             type: String,
             trim: true

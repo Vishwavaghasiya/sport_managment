@@ -5,7 +5,7 @@ const createSportsCategory = async (reqBody) => {
 }
 
 const getSportsCategoryList = async (req, res) => {
-    return SportsCategory.find();
+    return SportsCategory.find().populate("sportsGallery");
 }
 
 const getSportsCategoryById = async (sportsCategoryId) => {

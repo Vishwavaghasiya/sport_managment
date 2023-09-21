@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const tournamentSchema = new mongoose.Schema(
+const founderSchema = new mongoose.Schema(
     {
         name: {
             type: String,
@@ -22,6 +22,10 @@ const tournamentSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "team"
         },
+        founder: {
+            type: mongoose.Types.ObjectId,
+            ref: "founder"
+        },
         matches: {
             type: String,
             trim: true
@@ -37,5 +41,5 @@ const tournamentSchema = new mongoose.Schema(
     }
 );
 
-const Tournament = mongoose.model("tournament", tournamentSchema);
-module.exports = Tournament
+const founder = mongoose.model("founder", founderSchema);
+module.exports = founder

@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 
 const sportsCategorySchema = new mongoose.Schema(
     {
+        sportsGallery: {
+            type: mongoose.Types.ObjectId,
+            ref: "sportsGallery"
+        },
         name: {
             type: String,
             trim: true

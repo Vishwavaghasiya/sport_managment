@@ -5,7 +5,7 @@ const createTeam = async (reqBody) => {
 }
 
 const getTeamList = async (req, res) => {
-    return Team.find();
+    return Team.find().populate("user").populate("tournament");
 }
 
 const getTeamById = async (teamId) => {

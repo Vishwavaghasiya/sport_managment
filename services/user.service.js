@@ -5,7 +5,7 @@ const createUser = async (reqBody) => {
 }
 
 const getUserList = async (req, res) => {
-    return User.find();
+    return User.find().populate("teams").populate("founder").populate("contactUs").populate("sportsGallery").populate("sportsCategory").populate("tournament");
 }
 
 const getUserById = async (userId) => {

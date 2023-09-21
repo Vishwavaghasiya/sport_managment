@@ -6,6 +6,10 @@ const contactUsSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
+        user: {
+            type: mongoose.Types.ObjectId,
+            ref: "user"
+        },
         email: {
             type: String,
             trim: true

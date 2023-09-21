@@ -10,10 +10,6 @@ const dashboardSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "contactUs"
         },
-        email: {
-            type: mongoose.Types.ObjectId,
-            ref: "contactUs"
-        },
         teams: {
             type: String,
             trim: true

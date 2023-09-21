@@ -5,7 +5,7 @@ const createContactUs = async (reqBody) => {
 }
 
 const getContactUsList = async (req, res) => {
-    return ContactUs.find();
+    return ContactUs.find().populate("user");
 }
 
 const getContactUsDetails = async (contactUsId) => {

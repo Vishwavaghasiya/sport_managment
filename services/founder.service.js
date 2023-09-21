@@ -5,7 +5,7 @@ const createFounder = async (reqBody) => {
 }
 
 const getFounderList = async (req, res) => {
-    return Founder.find();
+    return Founder.find().populate("user").populate("contactUs");
 }
 
 const getFounderById = async (founderId) => {
