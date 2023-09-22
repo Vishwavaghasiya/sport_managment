@@ -4,6 +4,7 @@ const { sportsCategoryService } = require("../services");
 const createSportsCategory = async (req, res) => {
     try {
         const reqBody = req.body;
+
         const sportsCategory = await sportsCategoryService.createSportsCategory(reqBody);
         if (!sportsCategory) {
             throw new Error("sportsCategory not found !");

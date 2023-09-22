@@ -1,9 +1,17 @@
+const fs = require("fs")
 const { sportsGalleryService } = require("../services");
 
 /**create sportsGallery */
 const createSportsGallery = async (req, res) => {
     try {
         const reqBody = req.body;
+
+        if (req.file) {
+            reqBody.sports_image = req.file.filename;
+        } else {
+            throw new Error("Sports image is required!");
+        }
+
         const sportsGallery = await sportsGalleryService.createSportsGallery(reqBody);
         if (!sportsGallery) {
             throw new Error("sportsGallery not found !");

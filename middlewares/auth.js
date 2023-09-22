@@ -8,9 +8,11 @@ const auth = () => async (req, res, next) => {
             return next(new Error("Please authenticate!"));
         }
 
+        const secret_key = "secretkeyhere";
+
         const decoded = jwt.verify(
             token.replace("Bearer ", ""),
-            jwt.secret_key
+            secret_key
         );
 
         if (!decoded) {

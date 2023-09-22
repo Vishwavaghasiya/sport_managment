@@ -1,13 +1,13 @@
 const http = require("http");
 const express = require("express");
-// const { env } = require("process");
 const bodyParser = require("body-parser");
 const { connectDB } = require("./db/dbConnection");
 const routes = require("./routes/v1");
+const path = require("path")
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended : false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use("/v1", routes);
@@ -19,6 +19,9 @@ app.use((req, res, next) => {
 const server = http.createServer(app);
 
 connectDB();
+
+/**img */
+app.use(express.static(path.join(__dirname, `./public`)));
 
 const port = 8030;
 server.listen(port, () => {
