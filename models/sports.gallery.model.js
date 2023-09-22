@@ -12,34 +12,34 @@ const sportsGallerySchema = new mongoose.Schema(
             trim: true
         },
         //image , video
-        // media_type: {
-        //     type: String,
-        //     trim: true
-        // },
+        media_type: {
+            type: String,
+            trim: true
+        },
         sports_image: {
             type: String,
             trim: true,
         },
-        // uploadedBy: {
-        //     type: mongoose.Types.ObjectId,
-        //     ref: "user"
-        // },
-        // team: {
-        //     type: mongoose.Types.ObjectId,
-        //     ref: "team"
-        // },
-        // sportsCategory: {
-        //     type: mongoose.Types.ObjectId,
-        //     ref: "sportsCategory"
-        // },
-        // sports_events: {
-        //     type: String,
-        //     trim: true
-        // },
-        // athlete: {
-        //     type: String,
-        //     trim: true
-        // },
+        uploadedBy: {
+            type: mongoose.Types.ObjectId,
+            ref: "user"
+        },
+        team: {
+            type: mongoose.Types.ObjectId,
+            ref: "team"
+        },
+        sportsCategory: {
+            type: mongoose.Types.ObjectId,
+            ref: "sportsCategory"
+        },
+        sports_events: {
+            type: String,
+            trim: true
+        },
+        athlete: {
+            type: String,
+            trim: true
+        },
         is_active: {
             type: Boolean,
             default: true
