@@ -34,7 +34,7 @@ router.delete(
 
 router.post(
     "/sendMail",
-    // validate(userValidation.sendMail),
+    validate(userValidation.sendMail),
     userController.sendMail
 );
 
