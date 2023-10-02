@@ -6,10 +6,8 @@ const generateToken = async (req, res) => {
         const reqBody = req.body;
         const token = await tokenService.generateToken(reqBody);
         reqBody.token = token;
-        // console.log(reqBody);
 
         const saveToken = await tokenService.saveToken(reqBody);
-        // console.log(saveToken);
         res.status(200).json(
             {
                 success: true,

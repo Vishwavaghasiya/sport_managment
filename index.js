@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const { connectDB } = require("./db/dbConnection");
 const routes = require("./routes/v1");
 const path = require("path")
+const port = 8030;
 
 const app = express();
 
@@ -21,9 +22,8 @@ const server = http.createServer(app);
 connectDB();
 
 /**img */
-app.use(express.static(path.join(__dirname, `./public`)));
+app.use(express.static(path.join(__dirname, `public`)));
 
-const port = 8030;
 server.listen(port, () => {
     console.log("Server listning port number " + port);
 });

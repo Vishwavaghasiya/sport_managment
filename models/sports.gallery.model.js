@@ -11,7 +11,6 @@ const sportsGallerySchema = new mongoose.Schema(
             type: String,
             trim: true
         },
-        //image , video
         media_type: {
             type: String,
             trim: true

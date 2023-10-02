@@ -1,5 +1,6 @@
 const { contactUsService } = require("../services");
 
+/**create contactUs */
 const createContactUs = async (req, res) => {
     try {
         const reqBody = req.body;
